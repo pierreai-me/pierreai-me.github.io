@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pierre AI</title>
     <style>
+        /* ... (CSS from previous response, with the UPDATED SOCIAL LINK CSS and NEW PROJECT LINK CSS) ... */
         * {
             margin: 0;
             padding: 0;
@@ -134,25 +135,32 @@
             margin-bottom: 15px;
         }
 
+        /* Updated styling for project links (GitHub buttons) - WHITE-ISH BACKGROUND & NARROWER */
         .project-link {
-            display: block; /* Changed to block to control width */
-            width: 76px;
-            margin-left: auto;
-            margin-right: auto; /* Center the button */
-            padding: 8px 16px;
-            background-color: #4a69bd;
-            color: white;
+            display: flex; /* Use flexbox to center icon */
+            justify-content: center;
+            align-items: center;
+            width: fit-content; /* Make button width fit content */
+            padding: 8px 16px; /* Adjust padding as needed */
+            background-color: #f8f9fa; /* White-ish background */
+            border: 2px solid #4a69bd; /* Blue border to maintain theme */
+            color: #4a69bd; /* Icon color (if needed - adjust if your icons are already colored) */
             text-decoration: none;
-            border-radius: 4px;
+            border-radius: 8px; /* Rounded corners, like social links */
             font-size: 0.9rem;
-            transition: background-color 0.3s;
-            margin-top: auto; /* Push the link to the bottom */
-            text-align: center; /* Center text inside the button */
+            transition: background-color 0.3s, border-color 0.3s; /* Transition for border color */
+            margin-top: auto; /* Push to bottom of project-info */
+            margin-left: auto; /* Center horizontally within project-info */
+            margin-right: auto; /* Center horizontally within project-info */
+            text-align: center; /* Center text inside if you add text later */
         }
 
         .project-link:hover {
-            background-color: #3d56a8;
+            background-color: #e9ecef; /* Slightly darker white-ish on hover */
+            border-color: #3d56a8; /* Darker blue border on hover */
+            color: #3d56a8; /* Darker blue icon color on hover (if needed) */
         }
+
 
         .social-links {
             display: flex;
@@ -162,20 +170,44 @@
             margin-top: 40px;
         }
 
+        /* Updated styling for social links - WHITE-ISH BACKGROUND */
         .social-link {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #4a69bd;
-            color: white;
+            display: flex; /* Use flexbox for centering icon */
+            justify-content: center;
+            align-items: center;
+            padding: 12px 24px; /* Keep social link padding */
+            background-color: #f8f9fa; /* White-ish background */
+            border: 2px solid #4a69bd; /* Blue border to maintain the theme */
+            color: #4a69bd; /* Icon color - adjust if your icons are already colored */
             text-decoration: none;
-            border-radius: 4px;
+            border-radius: 8px; /* Slightly more rounded corners */
             font-weight: 500;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, border-color 0.3s; /* Transition for border color as well */
         }
 
         .social-link:hover {
-            background-color: #3d56a8;
+            background-color: #e9ecef; /* Slightly darker white-ish on hover */
+            border-color: #3d56a8; /* Darker blue border on hover */
+            color: #3d56a8; /* Darker blue icon color on hover (if needed) */
         }
+
+
+        /* Styling for social icons */
+        .social-icon {
+            display: block; /* Ensure icon behaves like a block element */
+            width: 36px; /* Adjust icon size as needed */
+            height: 36px;
+        }
+
+        /* Styling for project icons (GitHub buttons) */
+        .project-icon {
+            display: block; /* Ensure icon behaves like a block element */
+            width: 20px; /* Adjust icon size as needed - smaller than social icons */
+            height: 20px;
+            margin-left: auto;
+            margin-right: auto; /* Center the icon */
+        }
+
 
         footer {
             text-align: center;
@@ -218,17 +250,26 @@
             <section class="about">
                 <h2>About Me</h2>
                 <p>
-                    I am a software engineer within the artificial intelligence group at Bloomberg.
-                    Through my work, I aim to improve our software development practices, deliver great products to our clients, and help my colleagues grow their careers.
-                    This is a very exciting time. Feel free to reach out through any of the channels below to connect, collaborate, or just chat about AI!
+                    Welcome to my personal website.
+                    I'm passionate about artificial intelligence and its applications in finance.
+                    Through my work, I aim to improve our software development practices and help my colleagues grow their careers.
+                    Feel free to reach out through any of the channels below to connect, collaborate, or just chat about AI!
                 </p>
             </section>
 
             <div class="social-links">
-                <a href="https://github.com/pierreai-me" class="social-link" target="_blank">Github</a>
-                <a href="https://www.linkedin.com/in/plbrunelle/" class="social-link" target="_blank">LinkedIn</a>
-                <a href="https://substack.com/@pierrebrunelleai" class="social-link" target="_blank">Substack</a>
-                <a href="mailto:pierre@pierreai.me" class="social-link">Email Me</a>
+                <a href="https://github.com/pierreai-me" class="social-link" target="_blank">
+                    <img src="images/github-icon.svg" alt="GitHub" class="social-icon">
+                </a>
+                <a href="https://www.linkedin.com/in/plbrunelle/" class="social-link" target="_blank">
+                    <img src="images/linkedin-icon.svg" alt="LinkedIn" class="social-icon">
+                </a>
+                <a href="https://substack.com/@pierrebrunelleai" class="social-link" target="_blank">
+                    <img src="images/substack-icon.svg" alt="Substack" class="social-icon">
+                </a>
+                <a href="mailto:pierre@pierreai.me" class="social-link">
+                    <img src="images/email-icon.svg" alt="Email" class="social-icon">
+                </a>
             </div>
         </div>
 
@@ -244,7 +285,9 @@
                         <div class="project-info">
                             <a href="https://github.com/pierreai-me/similar-images"  class="project-title" target="_blank">Similar Images</a>
                             <p class="project-desc">Combines a web scraper with LLMs to find images that match your quality requirements, either via search queries or existing images.</p>
-                            <a href="https://github.com/pierreai-me/similar-images" class="project-link" target="_blank">GitHub</a>
+                            <a href="https://github.com/pierreai-me/similar-images" class="project-link" target="_blank">
+                                <img src="images/github-icon.svg" alt="GitHub" class="project-icon">
+                            </a>
                         </div>
                     </div>
 
@@ -253,7 +296,9 @@
                         <div class="project-info">
                             <a href="https://dogetaxcuts.pierreai.me" class="project-title" target="_blank">DOGE Tax Savings Analysis</a>
                             <p class="project-desc">A calculator to help you understand how much less income taxes you would pay every year assuming 100% of the savings realized by Elon Musk's DOGE are used to pay for income tax reductions.</p>
-                            <a href="https://github.com/pierreai-me/doge-tax-cuts" class="project-link" target="_blank">GitHub</a>
+                            <a href="https://github.com/pierreai-me/doge-tax-cuts" class="project-link" target="_blank">
+                                <img src="images/github-icon.svg" alt="GitHub" class="project-icon">
+                            </a>
                         </div>
                     </div>
 
@@ -262,7 +307,9 @@
                         <div class="project-info">
                             <a href="https://github.com/pierreai-me/reader-companion" class="project-title" target="_blank">Reader Companion</a>
                             <p class="project-desc">Ask questions to your LLM companion while reading PDFs. A simple PyQt6 app integrating an LLM chat with a PDF reader.</p>
-                            <a href="https://github.com/pierreai-me/reader-companion" class="project-link" target="_blank">GitHub</a>
+                            <a href="https://github.com/pierreai-me/reader-companion" class="project-link" target="_blank">
+                                <img src="images/github-icon.svg" alt="GitHub" class="project-icon">
+                            </a>
                         </div>
                     </div>
 
