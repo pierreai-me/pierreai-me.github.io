@@ -94,6 +94,8 @@
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
+            display: flex; /* Add flex display to project card */
+            flex-direction: column; /* Stack image and info vertically */
         }
 
         .project-card:hover {
@@ -102,13 +104,16 @@
 
         .project-image {
             width: 100%;
-            height: 350px;
+            height: 300px; /* Increased height for better visual balance */
             background-size: cover;
             background-position: center;
         }
 
         .project-info {
             padding: 15px;
+            display: flex; /* Enable flexbox for project info */
+            flex-direction: column; /* Stack info items vertically */
+            flex: 1; /* Allow project-info to take up remaining space in project-card */
         }
 
         .project-title {
@@ -130,7 +135,10 @@
         }
 
         .project-link {
-            display: inline-block;
+            display: block; /* Changed to block to control width */
+            width: 76px;
+            margin-left: auto;
+            margin-right: auto; /* Center the button */
             padding: 8px 16px;
             background-color: #4a69bd;
             color: white;
@@ -138,6 +146,8 @@
             border-radius: 4px;
             font-size: 0.9rem;
             transition: background-color 0.3s;
+            margin-top: auto; /* Push the link to the bottom */
+            text-align: center; /* Center text inside the button */
         }
 
         .project-link:hover {
@@ -208,17 +218,16 @@
             <section class="about">
                 <h2>About Me</h2>
                 <p>
-                    Welcome to my personal website.
-                    I'm passionate about artificial intelligence and its applications in finance.
-                    Through my work, I aim to improve our software development practices and help my colleagues grow their careers.
-                    Feel free to reach out through any of the channels below to connect, collaborate, or just chat about AI!
+                    I am a software engineer within the artificial intelligence group at Bloomberg.
+                    Through my work, I aim to improve our software development practices, deliver great products to our clients, and help my colleagues grow their careers.
+                    This is a very exciting time. Feel free to reach out through any of the channels below to connect, collaborate, or just chat about AI!
                 </p>
             </section>
 
             <div class="social-links">
-                <a href="https://github.com/pierreai-me" class="social-link">Github</a>
-                <a href="https://www.linkedin.com/in/plbrunelle/" class="social-link">LinkedIn</a>
-                <a href="https://substack.com/@pierrebrunelleai" class="social-link">Substack</a>
+                <a href="https://github.com/pierreai-me" class="social-link" target="_blank">Github</a>
+                <a href="https://www.linkedin.com/in/plbrunelle/" class="social-link" target="_blank">LinkedIn</a>
+                <a href="https://substack.com/@pierrebrunelleai" class="social-link" target="_blank">Substack</a>
                 <a href="mailto:pierre@pierreai.me" class="social-link">Email Me</a>
             </div>
         </div>
@@ -233,28 +242,27 @@
                     <div class="project-card">
                         <div class="project-image" style="background-image: url('dog.jpg');"></div>
                         <div class="project-info">
-                            <a href="https://github.com/pierreai-me/similar-images"  class="project-title">Similar Images</a>
+                            <a href="https://github.com/pierreai-me/similar-images"  class="project-title" target="_blank">Similar Images</a>
                             <p class="project-desc">Combines a web scraper with LLMs to find images that match your quality requirements, either via search queries or existing images.</p>
-                            <a href="https://github.com/pierreai-me/similar-images" class="project-link">GitHub</a>
+                            <a href="https://github.com/pierreai-me/similar-images" class="project-link" target="_blank">GitHub</a>
                         </div>
                     </div>
 
                     <div class="project-card">
                         <div class="project-image" style="background-image: url('dogetaxcuts.png');"></div>
                         <div class="project-info">
-                            <a href="https://dogetaxcuts.pierreai.me" class="project-title">DOGE Tax Savings Analysis</a>
+                            <a href="https://dogetaxcuts.pierreai.me" class="project-title" target="_blank">DOGE Tax Savings Analysis</a>
                             <p class="project-desc">A calculator to help you understand how much less income taxes you would pay every year assuming 100% of the savings realized by Elon Musk's DOGE are used to pay for income tax reductions.</p>
-                            <a href="https://github.com/pierreai-me/doge-tax-cuts" class="project-link">GitHub</a>
+                            <a href="https://github.com/pierreai-me/doge-tax-cuts" class="project-link" target="_blank">GitHub</a>
                         </div>
                     </div>
 
                     <div class="project-card">
                         <div class="project-image" style="background-image: url('reader-companion.png');"></div>
                         <div class="project-info">
-                            <a href="https://github.com/pierreai-me/reader-companion" class="project-title">Reader Companion</a>
-                            <p class="project-desc"></p>Ask questions to your LLM companion while reading PDFs. A simple PyQt6 app integrating an LLM chat with a PDF reader.
-                        </p>
-                            <a href="https://github.com/pierreai-me/reader-companion" class="project-link">GitHub</a>
+                            <a href="https://github.com/pierreai-me/reader-companion" class="project-title" target="_blank">Reader Companion</a>
+                            <p class="project-desc">Ask questions to your LLM companion while reading PDFs. A simple PyQt6 app integrating an LLM chat with a PDF reader.</p>
+                            <a href="https://github.com/pierreai-me/reader-companion" class="project-link" target="_blank">GitHub</a>
                         </div>
                     </div>
 
@@ -264,7 +272,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Pierre Brunelle. All rights reserved.</p>
+        <p>© 2025 Pierre Brunelle. All rights reserved.</p>
     </footer>
 
     <script>
